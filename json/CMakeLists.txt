@@ -1,0 +1,5 @@
+add_executable(${PROJECT_NAME} "main.cpp")
+target_include_directories(${PROJECT_NAME} PUBLIC ${Boost_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} PRIVATE ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
+target_compile_definitions(${PROJECT_NAME} PRIVATE -DBOOST_ALL_NO_LIB)
+target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
